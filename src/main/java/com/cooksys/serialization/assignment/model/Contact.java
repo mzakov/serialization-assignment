@@ -1,9 +1,21 @@
 package com.cooksys.serialization.assignment.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "contact")
 public class Contact {
+	@XmlAttribute(name = "first-name" )
     private String firstName;
+	@XmlAttribute(name = "last-name" )
     private String lastName;
+	@XmlElement
     private String email;
+	@XmlElement (name = "phone-number")
     private String phoneNumber;
 
     public String getFirstName() {
